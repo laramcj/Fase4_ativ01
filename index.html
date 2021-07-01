@@ -1,5 +1,145 @@
-<html><head><title>Gulliver Traveller - Roteiros</title></head><body><b>->1 - Roteiros para *São Paulo*</b><br>A Terra da Garoa!<br>Fundada em 25 de janeiro de 1554 a cidade tem hoje cerca de 12 milhões de habitantes e é considerada o centro financeiro do Brasil e aqui vão 3 dicas de roteiros obrigatórios para aqueles que passam pela capital paulista<br>#Roteiro A | Região: Avenida Paulista<br>MASP; Parque Trianon; Rua Augusta<br>#Roteiro B | Região: Centro<br>Catedral da Sé; Pátio do Colégio; Rua Augusta<br>#Roteiro C | Região: Vila Madalena<br>Beco do Batman; Feirinha da Benedito Calixto; Livraria da Vila<br> <b>->2 - Roteiros para *Las Vegas*</b><br>Viva Las Vegas!<br>       A cidade mais populosa e mais densamente povoada do estado de Nevada, Las Vegas foi fundada em 1905 e é considerada uma cidade, oficialmente, desde 1911 e conta com mais de meio milhão de habitantes. Venha conhecer a capital dos jogos de azar!<br>#Roteiro A | Região: Las Vegas Boulevard South<br>Fonte do Bellagio; Principais Cassinos; Madame Tussauds<br>#Roteiro B | Região: Downtown<br>; Fremont; Las Vegas Art Museum; Museu nacional do Crime Organizado; <br>#Roteiro C | Região: Las Vegas Boulevard North<br>Outlet Premium North; Stratosphere; Apple Fashion Show<br><b>->3 - Roteiros para *Moscou*</b><br>Privet!<br>A capital Russa fica situada às margens do Rio Moscou e apesar de ser a cidade mais cosmopolita da Rússia, conta com grande resguardo de sua história soviética<br>#Roteiro A | Região: Praça Vermelha<br>Museu Histórico do Estado; Catedral de São Basílico; Mausoléu de Lênin<br>#Roteiro B | Região: Centro<br>Teatro Bolshoi; Monumento a Karl Marx; Rio Moscou<br>#Roteiro C | Região: Obras pela cidade<br>Metrô de Moscou; As Sete Irmãs; Moscow Leningradsky Railway Station  <br>
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+  <link rel="stylesheet" href="./css/style.css">
+
+  <title>Gulliver Traveller - Roteiros</title>
+  <link rel="icon" href="./image/icone traveller.svg">
+</head>
+
+<body>
+
+
+  <nav class="navbar navbar-expand-xl navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+      <img src="./image/logo traveller.svg" class="d-inline-block align-top" alt=""></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Onde se hospedar</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Como chegar</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            O que fazer<span class="sr-only">(current)</span>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">História</a>
+            <a class="dropdown-item" href="#">Cultura</a>
+            <a class="dropdown-item" href="#">Parques</a>
+            <a class="dropdown-item" href="#">Gastronomia</a>
+            <a class="dropdown-item" href="#">Vida Noturna</a>
+            <a class="dropdown-item active" href="#">Entretenimento</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Dicas úteis</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Alugue seu carro</a>
+        </li>
+      </ul>
+      
+    </div>
+  </nav>
+
+
+  <h1 class="display-5 text-info text-center">Respostas</h1>
+
+  <div class="container-fluid">
+    <div class="row">
+
+      <div class="col-12  ">
+        <div class="card bg-light border border-info rounded m-1 p-1">
+          <button onclick='goToCities()' type="button" class="btn btn-outline-info btn-lg  m-2 p-2" >Cidades</button>
+          <button onclick='goToItinerary()' type="button" class="btn btn-outline-info btn-lg  m-2 p-2" >Roteiros A</button>
+          <h5 class="card-title m-3" href="#cities" id="goToCities">Quantidade de Pontos turísticos do Roteiro A : </h5>
+          <div class="btn-group btn-group-toggle m-2 p-2" data-toggle="buttons">
+            <label class="btn btn-outline-info active">
+              <input onclick='goToSP()' type="radio" name="options" id="option1" autocomplete="off"> São Paulo
+            </label>
+            <label class="btn btn-outline-info">
+              <input onclick='goToLV()' type="radio" name="options" id="option2" autocomplete="off"> Las Vegas
+            </label>
+            <label class="btn btn-outline-info">
+              <input onclick='goToM()' type="radio" name="options" id="option3" autocomplete="off"> Moscou
+            </label>
+          </div>
+          <button onclick='goToDowntownSP()' type="button" class="btn btn-outline-info btn-lg  m-2 p-2" >Pontos Turísticos
+            Centro de São Paulo</button>
+          <button onclick='goToDowntownLV()' type="button" class="btn btn-outline-info btn-lg  m-2 p-2" >Pontos Turísticos
+            Downtown Las Vegas</button>
+
+          <form>
+            <div class="form-group m-2">
+              <label for="Answer">Respostas</label>
+              <textarea class="form-control form-control-lg " id="Answer" rows="3" readonly></textarea>
+            </div>
+          </form>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+  </div>
+
+
+
+
+
+
+  <script src="./js/text.js"></script>
+
+  <b>->1 - Roteiros para *São Paulo*</b><br>A Terra da Garoa!<br>Fundada em 25 de janeiro de 1554 a cidade tem hoje
+  cerca de 12 milhões de habitantes e é considerada o centro financeiro do Brasil e aqui vão 3 dicas de roteiros
+  obrigatórios para aqueles que passam pela capital paulista<br>#Roteiro A | Região: Avenida Paulista<br>MASP; Parque
+  Trianon; Rua Augusta<br>#Roteiro B | Região: Centro<br>Catedral da Sé; Pátio do Colégio; Rua Augusta<br>#Roteiro C |
+  Região: Vila Madalena<br>Beco do Batman; Feirinha da Benedito Calixto; Livraria da Vila<br> <b>->2 - Roteiros para
+    *Las Vegas*</b><br>Viva Las Vegas!<br>A cidade mais populosa e mais densamente povoada do estado de Nevada, Las
+  Vegas foi fundada em 1905 e é considerada uma cidade, oficialmente, desde 1911 e conta com mais de meio milhão de
+  habitantes. Venha conhecer a capital dos jogos de azar!<br>#Roteiro A | Região: Las Vegas Boulevard South<br>Fonte
+  do Bellagio; Principais Cassinos; Madame Tussauds<br>#Roteiro B | Região: Downtown<br>; Fremont; Las Vegas Art
+  Museum; Museu nacional do Crime Organizado; <br>#Roteiro C | Região: Las Vegas Boulevard North<br>Outlet Premium
+  North; Stratosphere; Apple Fashion Show<br><b>->3 - Roteiros para *Moscou*</b><br>Privet!<br>A capital Russa fica
+  situada às margens do Rio Moscou e apesar de ser a cidade mais cosmopolita da Rússia, conta com grande resguardo de
+  sua história soviética<br>#Roteiro A | Região: Praça Vermelha<br>Museu Histórico do Estado; Catedral de São
+  Basílico; Mausoléu de Lênin<br>#Roteiro B | Região: Centro<br>Teatro Bolshoi; Monumento a Karl Marx; Rio
+  Moscou<br>#Roteiro C | Região: Obras pela cidade<br>Metrô de Moscou; As Sete Irmãs; Moscow Leningradsky Railway
+  Station <br>
+
+  <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
+  </script>
 
 </body>
 
 </html>
+
+
+12163816
