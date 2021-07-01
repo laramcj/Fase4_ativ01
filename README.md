@@ -1,5 +1,7 @@
 # Fase4_ativ01
 
+Respostas:
+
 1 - getStringsByDelimiters("Roteiros para ", "</b>");
 2 - getStringsByDelimiters("#Roteiro A " , "#Roteiro B ")
 3 - getListOfPlacesByIndex(0,"Paulista","#Roteiro A " , "#Roteiro B ").length
